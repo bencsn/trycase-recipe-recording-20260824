@@ -4,15 +4,15 @@ const port = Number(process.env.PORT ?? 4321);
 const server = createServer((request, response) => {
   if (request.url === "/health") {
     response.writeHead(200, { "content-type": "application/json" });
-    response.end(JSON.stringify({ ok: true, recipe: 1 }));
+    response.end(JSON.stringify({ ok: true, recipe: 2 }));
     return;
   }
   response.writeHead(200, { "content-type": "text/html; charset=utf-8" });
   response.end(`<!doctype html>
     <html><body style="font-family:system-ui;padding:48px">
       <h1>Setup agent learned this application</h1>
-      <p>Recipe version one starts the server and verifies this page.</p>
-      <p>A fresh PR bot should reuse that verified recipe without rediscovering setup.</p>
+      <p>Recipe version two uses the new serve command and verifies this page.</p>
+      <p>TryCase retained v1 until this replacement passed a clean replay.</p>
     </body></html>`);
 });
 
