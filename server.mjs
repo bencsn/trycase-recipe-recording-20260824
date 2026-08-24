@@ -12,6 +12,7 @@ const server = createServer((request, response) => {
     <html><body style="font-family:system-ui;padding:48px">
       <h1>Setup agent learned this application</h1>
       <p>Recipe version one starts the server and verifies this page.</p>
+      <p>A fresh PR bot should reuse that verified recipe without rediscovering setup.</p>
     </body></html>`);
 });
 
