@@ -13,6 +13,7 @@ const server = createServer((request, response) => {
       <h1>Setup agent learned this application</h1>
       <p>Recipe version two uses the new serve command and verifies this page.</p>
       <p>TryCase retained v1 until this replacement passed a clean replay.</p>
+      <p>A later PR bot is now consuming verified recipe v2.</p>
     </body></html>`);
 });
 
